@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test login section first 1`] = `
+"The Best QA Engineer Ever
+Please enter the secret code
+(well, not so secret, it is actually included in this page in a hidden input)
+Code:
+Are you a robot?
+Submit"
+`;

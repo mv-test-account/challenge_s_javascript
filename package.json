@@ -1,0 +1,18 @@
+{
+  "name": "selenium",
+  "version": "1.0.8",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest -i",
+    "eslint": "eslint ./tests"
+  },
+  "dependencies": {
+    "@types/selenium-webdriver": "^3.0.14",
+    "axios": "^0.18.0",
+    "chromedriver": "^2.46.0",
+    "eslint": "^5.10.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "jest": "^23.6.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}

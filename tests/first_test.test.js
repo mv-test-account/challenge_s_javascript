@@ -10,7 +10,7 @@ let quotesList = [
     'Beware of low-flying butterflies.',
     'Do something unusual today. Pay a bill.',
     'Excellent time to become a missing person.',
-    'Nothing so needs reforming as other people\'s habits'
+    'Nothing so needs reforming as other people\'s habits.'
 ];
 
 describe('test login section', () => {
@@ -45,15 +45,19 @@ describe('test login section', () => {
             sumScore += parseInt(await score.getText());
         }
 
-        let totalScore = await driver.findElement(By.css('body'));
-        let quotes = await totalScore.getText();
+        let fullBody = await driver.findElement(By.css('body'));
+        body = await fullBody.getText();
 
-        expect(quotes).toContain('Famous Quotes');
-        expect(quotes).toContain('Awesome Quotes');
-        expect(quotes).toContain(sumScore);
+        expect(body).toContain('Famous Quotes');
+        expect(body).toContain('Awesome Quotes');
+        expect(body).toContain(sumScore);
 
-        for (let quote of quotesList) {
-            expect(quotes).toContain(quote);
+        let listOfQuotes = await driver.findElements(By.xpath('//li/span[1]'));
+
+        for (let quote of listOfQuotes) {
+            expect(quotesList).toContain(await quote.getText());
         }
+        expect(listOfQuotes.length).toBe(10);
+
     });
 });

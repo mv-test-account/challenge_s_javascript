@@ -16,6 +16,7 @@ let quotesList = [
 describe('test login section', () => {
     beforeEach(async() => {
         await driver.get('https://qa-engineer.herokuapp.com');
+
         //await driver.wait(until.urlIs('https://qa-engineer.herokuapp.com'), 10000);
     });
 

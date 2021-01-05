@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@types/selenium-webdriver": "^3.0.14",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chromedriver": "^2.46.0",
     "eslint": "^5.10.0",
     "eslint-plugin-jest": "^22.1.2",
